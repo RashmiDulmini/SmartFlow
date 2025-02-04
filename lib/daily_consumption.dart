@@ -21,29 +21,28 @@ class _DailyConsumptionState extends State<DailyConsumption> {
   @override
   void initState() {
     super.initState();
-
     _listenForWaterFlowUpdates();
   }
 
   void _listenForWaterFlowUpdates() {
-  _waterFlowRef.onValue.listen((DatabaseEvent event) {
-    if (event.snapshot.value != null) {
-      final data = event.snapshot.value as Map<dynamic, dynamic>;
+    _waterFlowRef.onValue.listen((DatabaseEvent event) {
+      if (event.snapshot.value != null) {
+        final data = event.snapshot.value as Map<dynamic, dynamic>;
 
-      setState(() {
-        totalVolume = data['TotalVolume']?.toString() ?? "Not Available";
-        flowRate = data['FlowRate']?.toString() ?? "Not Available";
-      });
-    } else {
-      setState(() {
-        totalVolume = "Data not available";
-        flowRate = "Data not available";
-      });
-    }
-  }, onError: (error) {
-    print("Firebase Error: $error");
-  });
-}
+        setState(() {
+          totalVolume = "${data['TotalVolume']?.toString() ?? "Not Available"} L";
+          flowRate = "${data['FlowRate']?.toString() ?? "Not Available"} L/min";
+        });
+      } else {
+        setState(() {
+          totalVolume = "Data not available";
+          flowRate = "Data not available";
+        });
+      }
+    }, onError: (error) {
+      print("Firebase Error: $error");
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
