@@ -65,8 +65,17 @@ class _DailyConsumptionState extends State<DailyConsumption> {
               width: double.infinity,
               padding: const EdgeInsets.all(30),
               decoration: BoxDecoration(
+                color: Colors.white, // Background color
                 border: Border.all(color: const Color(0xFF5787CA), width: 2),
                 borderRadius: BorderRadius.circular(12),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFF204B8A).withOpacity(0.3), // Blue shadow
+                    spreadRadius: 2,
+                    blurRadius: 10,
+                    offset: const Offset(3, 6), // Shadow direction
+                  ),
+                ],
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
