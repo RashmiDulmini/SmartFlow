@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart'; // Import firebase_core
+import 'package:firebase_core/firebase_core.dart';
+import 'package:smartflow/firebase_options.dart';
 import 'package:smartflow/get_started.dart';
-import 'package:smartflow/home_page.dart';
-import 'daily_consumption.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // Ensures binding before running app
-  await Firebase.initializeApp(); // Initialize Firebase
+void main()async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: "AIzaSyCXDIZpz1__Ew-9dKAR409Nb1OvpbkK9aE", 
+      appId: "1:633767430031:android:bff429c63d03a1377cedfa", 
+      messagingSenderId: "633767430031", 
+      projectId: "smartflow-90170",
+      authDomain: "smartflow-90170.firebaseapp.com",
+      databaseURL: "https://smartflow-90170-default-rtdb.firebaseio.com",
+      storageBucket: "smartflow-90170.appspot.com",
+      )
+  );
   runApp(const MyApp());
 }
 
@@ -15,13 +24,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SmartFlow',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: GetStarted(), // Your home page
+      home:  GetStarted(), // Ensure GetStarted() exists
     );
   }
 }
