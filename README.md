@@ -1,7 +1,3 @@
-# SmartFlow
-Track and monitor daily water consumption using IOT
-
-
 # SmartFlow - IoT-Enabled Smart Water Faucet System
 
 SmartFlow is an IoT-enabled smart water monitoring system that integrates a **water flow sensor** with a **Flutter-based mobile application**. This system tracks water consumption in real-time, providing insights into daily usage and allowing users to monitor consumption trends.
@@ -13,7 +9,7 @@ SmartFlow is an IoT-enabled smart water monitoring system that integrates a **wa
 - 📈 **Graphical Visualization** - View water consumption in a user-friendly chart.
 - 🌐 **IoT Integration** - Uses NodeMCU (ESP8266) for data transmission.
 - 📱 **Flutter-based Mobile App** - User-friendly UI to track water usage.
-- 🔔 **Alerts & Notifications** *(Future Update)* - Notify users about excessive water consumption.
+
 
 ## 🛠️ Tech Stack
 
@@ -24,13 +20,11 @@ SmartFlow is an IoT-enabled smart water monitoring system that integrates a **wa
 ### **Backend & IoT**
 - **NodeMCU ESP8266** - Microcontroller to process water flow data.
 - **Firebase** - Cloud-based storage for real-time data syncing.
-- **ThingSpeak** *(Alternative Cloud Option)* - IoT analytics platform.
 - **C++ (Arduino IDE)** - For programming the ESP8266.
 
 ### **Hardware Components**
 - **Water Flow Sensor (YF-S201/YF-S401)** - Measures flow rate and total consumption.
 - **NodeMCU ESP8266** - Handles Wi-Fi communication and processing.
-- **OLED Display (Optional)** - Displays real-time water flow.
 - **Pipes & Valves** - Water supply integration.
 
 ## 🔧 Installation Guide
@@ -48,7 +42,7 @@ SmartFlow is an IoT-enabled smart water monitoring system that integrates a **wa
 ### 3️⃣ **Run the Flutter App**
 ```sh
 # Clone the repository
-git clone https://github.com/your-repo/SmartFlow.git
+git clone https://github.com/RashmiDulmini/SmartFlow
 cd SmartFlow
 
 # Install dependencies
@@ -58,14 +52,6 @@ flutter pub get
 flutter run
 ```
 
-## 📌 To-Do / Future Enhancements
-- 📢 **Push Notifications for Excessive Water Usage**
-- 🌍 **Geolocation-based Water Usage Analysis**
-- 📊 **Machine Learning-based Water Consumption Predictions**
-
-## 📜 License
-This project is licensed under the **MIT License**.
-
 ---
-### 👨‍💻 Developed by [Your Name]
-If you have any suggestions or feature requests, feel free to contribute! 🚀
+### 👨‍💻 Developed by [Rashmi Dulmini]
+
